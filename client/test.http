@@ -1,0 +1,9 @@
+# GET https://trackapi.nutritionix.com/v2/search/instant?query=apple
+x-app-id: 8dac521d
+x-app-key: 4c42a2e66a39c03a961bb0010312e00c
+
+
+
+POST https://trackapi.nutritionix.com/v2/natural/nutrients
+
+query: apple
