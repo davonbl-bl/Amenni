@@ -1,0 +1,34 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+
+.createComment{
+
+    &__comment{
+        padding: 0.5rem 1rem;
+        border: solid #000000 0.1rem;
+        border-radius: 1.25rem;
+        width: 50%;
+        margin-top: 10px;
+        cursor: pointer;
+        background-color: white;
+    }
+
+    &__comment-title{
+        text-align:left; 
+    }
+
+    &__comment-body{
+        text-align:left; 
+        padding-top:10px;
+        padding-bottom:10px; 
+        
+    }
+
+    &__comment-userName{
+        text-align: right;
+        display: none; 
+    }
+
+}

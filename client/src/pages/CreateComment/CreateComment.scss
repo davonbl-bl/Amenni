@@ -1,0 +1,68 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+
+.createComment{
+
+    font-family: "Apercu Mono";
+    padding-left:20px;
+    padding-right:20px; 
+
+    @include tablet{
+        // display:flex;
+    }
+
+    &__form{
+        display:flex; 
+        justify-content: center;
+        flex-direction: column;
+        padding: 0.5rem 1rem;
+        border: solid #000000 0.1rem;
+        border-radius: 1.25rem;
+        width: 50%;
+        margin: auto;
+    }
+
+    &__top, &__middle, &__bottom {
+        display:flex;
+        flex-direction: column;
+        
+    }
+
+    &__top-label, &__middle-label, &__bottom-label{
+        text-align: left;   
+    }
+
+    &__top-post, &__middle-post, &__bottom-post{
+        padding: 0.5rem 1rem;
+        border: solid #BDC5D5 0.1rem;
+        border-radius: 1.25rem;
+    }
+
+    &__submit{
+        padding: 0.5rem 1rem;
+        border: solid #BDC5D5 0.1rem;
+        border-radius: 1.25rem;
+        margin-top: 16px;
+    }
+
+    /*      
+        This is for the comments posted
+    */
+
+    &__display{
+        text-align: -webkit-center;
+    }
+
+    &__style-error{
+        font-size: .75rem;
+        color: red; 
+        text-align: right;
+
+    }
+    
+
+}
+
+

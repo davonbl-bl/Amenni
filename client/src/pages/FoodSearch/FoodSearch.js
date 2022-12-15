@@ -7,6 +7,8 @@ import '../FoodSearch/FoodSearch.scss';
 
 function FoodSearch() {
 
+    //THIS SHOULD BE DELETED
+
     //Comment out section
     // let myKeys = {
     //     "x-app-id": myApiKey,
@@ -76,7 +78,7 @@ function FoodSearch() {
 
     return(
         <div className="food__container">
-            {
+            {/* {
                 details.map((ele, index)=>{
                     return(
                         <Link to = {`/${ele.name}`}
@@ -88,7 +90,7 @@ function FoodSearch() {
                         />
                     )
                 }) 
-            }
+            } */}
         </div>
 
     )

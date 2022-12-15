@@ -1,0 +1,71 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.commentPage{
+    font-family: "Apercu Mono";
+
+    &__left-side{
+        padding: 0.5rem 1rem;
+        border: solid #000000 0.1rem;
+        border-radius: 1.25rem;
+        width: 50%;
+        margin: auto;
+        background-color: white;
+    }
+
+    &__title{
+        text-align:left;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    &__postText{
+        text-align: left;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    &__username{
+        text-align: right;
+    }
+
+    &__list-of-comments{
+        padding: 0.5rem 1rem;
+        border: solid #000000 0.1rem;
+        border-radius: 1.25rem;
+        width: 50%;
+        margin: auto;
+        text-align: left;
+        margin-top: 16px;
+        background-color: white;
+    }
+
+    &__comment-text, &__btn{
+        text-align: center;
+        padding: 0.5rem 1rem;
+        border: solid #BDC5D5 0.1rem;
+        border-radius: 1.25rem;
+    }
+
+    &__comment-text{
+        padding:55px 1rem;  
+    }
+
+    &__comment-section{
+
+        display: flex;
+        flex-direction: column;
+        width: 53%;
+        margin: auto;
+        padding-top: 35px;
+        padding-bottom: 20px;
+    
+    }
+
+    &__return{
+        // text-align: left;
+        color: red; 
+    }
+
+}

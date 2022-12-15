@@ -1,0 +1,55 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.food{
+    // &__form{
+    //     display: flex;
+    //     flex-direction: row;
+    //     flex-wrap: wrap;
+    //     width: 53%;
+    // }
+
+    &__photo{
+        width: 50%; 
+    }
+
+    &__items{
+        // font-family: "Apercu Mono";
+        padding: 0.5rem 1rem;
+        border: solid #000000 0.1rem;
+        border-radius: 1.25rem;
+        background: white;
+        color: #18120e;
+        // width: 70%;
+        @include tablet{
+            margin: 10px;
+        }
+    }
+
+    // &__fat{
+    //     font-family: 'Apercu Mono';
+    // }
+
+    &__info{
+        font-family: 'Apercu Mono';
+        width: 50%; 
+        margin: auto; 
+        // display: flex; 
+
+    }
+
+}
+
+a{
+    margin-top: 5px; 
+}
+
+#text{
+    display: none; 
+}
+
+// .food__items .food__info{
+//     font-family: 'Apercu Mono';
+// }
+

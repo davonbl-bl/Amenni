@@ -1,4 +1,5 @@
-const express = require ('express')
+const express = require ('express');
+// const { FOREIGNKEYS } = require('sequelize/types/query-types');
 const router = express.Router()
 const { Posts } = require("../models")
 
@@ -19,6 +20,15 @@ that exist in our mySQL workbench, and then return the data
 that we send to make sure the data has been confirmed
 
 */
+
+router.get("/byId/:id", async (req, res) => {
+    const id = req.params.id;
+    //containing the obj of the specific post we want, snd
+    //the primary key (findByPk) is in reference to fetching the id in the db
+    const post = await Posts.findByPk(id);
+    res.json(post);
+})
+
 router.post("/", async (req, res) => {
     const post = req.body;
     await Posts.create(post);

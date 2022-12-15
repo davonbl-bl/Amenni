@@ -1,102 +1,38 @@
-import axios from 'axios';
 import './HomePage.scss';
-import { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import FoodDetails from '../../components/FoodDetails/FoodDetails';
-
-
-
+import masonJars from '../../Assets/images/pexels-ella-olsson-1640767.jpg';
+import {Link} from 'react-router-dom'
 function HomePage() {
-
-
-    const [toEat, setToEat]= useState([])
-
-    let myApiKey = '4c42a2e66a39c03a961bb0010312e00c';
-    let myId = '8dac521d';
-
-    let postEndPoint = 'https://trackapi.nutritionix.com/v2/natural/nutrients';
-
-    const foodItems = (search) => {
-        axios.get(`https://trackapi.nutritionix.com/v2/search/instant?query=${search}`,
-            {
-                headers: {
-                    'x-app-id': myId,
-                    "x-app-key": myApiKey
-                }
-            })
-            .then((res) => {
-                // let foodData= res.data;
-                // console.log(foodData)
-                let commonFoodData = res.data.common;
-                console.log(commonFoodData)
-                // displayData=commonFoodData; 
-                setToEat(commonFoodData)
-
-            }).catch((error) => {
-                console.log(error)
-            })
-    }
-
-
-    const nuritionValue = (search) => {
-
-        const params = { query: search }
-
-        axios.post(postEndPoint, params,
-            {
-                headers: {
-                    'x-app-id': myId,
-                    "x-app-key": myApiKey
-                }
-            })
-            .then((res) => {
-                console.log(res.data.foods[0])
-            }).catch((error) => {
-                console.log(error)
-            })
-    }
-
-
-    const searchFoodItems = (e) => {
-        e.preventDefault();
-        let search = e.target.search.value
-        foodItems(search)
-        // nuritionValue(search)
-    }
-
     return (
-
-        <div className="food">
-            <h2 className="food__title">Amenni</h2>
-            <form className="food__form" onSubmit={searchFoodItems}>
-                <input className="food__input" id="search" type="text" placeholder="Search Food Database" />
-                <button className="food__button" type="submit">Search</button>
-            </form>
-
-            <div className="food__container">
-                {
-                    toEat.map((ele, index) => {
-                        return (
-                            <Link to={`/${ele.food_name}`}>
-                                <FoodDetails
-                                    key={index}
-                                    food_name={ele.food_name}
-                                    image={ele.photo.thumb}
-                                />
-                            </Link>
-                        )
-                    })
-
-                }
-
+        <div className="info">
+            <div className="info__body">
+                <div className="info__body-left">
+                    <p className="info__title">
+                        Amenni
+                    </p>
+                    <p className ='info__quote'>
+                        {/* "to be at balance with one's self: physically and mentally." */}
+                        "In health, to be at balance with one's self."
+                    </p>
+                </div>
+                <div className="info__body-right">
+                    <img className="info__stock-photo" src={masonJars} />
+                </div>
             </div>
+            <div className="info__body-two">
+                <p className="info__text">
+                    Amenni is an application where you can keep track of and understand
+                    what you are eating. Thanks to Nutritionnix,
+                    we provide access to nutrition data on over 10,000 common food items.
+                    With our nutrition search engine, a personalized food diary, and upcoming
+                    interactive tools it is our objective to assist users in bridging the
+                    gap between health and nutrition.
 
+                </p>
 
-
+            {/* being at balance with one'self: physically and mentally */}
+            </div>
         </div>
-
     )
 }
 
-
-export default HomePage; 
+export default HomePage;

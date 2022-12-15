@@ -1,43 +1,56 @@
 import './NutritionFacts.scss';
+import {Link} from "react-router-dom"; 
 import axios from 'axios';
 import {useParams} from 'react';
 
 
-function NutritionFacts({saturated_fat, cholesterol,sodium, total_carbohydrates, vitamin_a, calcium  }) {
+function NutritionFacts({name, image, saturated_fat, cholesterol,sodium, potassium, total_carbohydrates,
+    dietary_fiber, sugar, protein }) {
 
-    //  {saturated_fat, cholesterol, sodium, total_carbohydrates }
-    let totalFat = saturated_fat;
+        // const zero = $0; 
+
 
     return (
-        // <div>
-        //     <p>testing</p>
-        // </div>
-    <div classNme= 'food__items'>
+    <div className= 'facts'>
+        <div className = "commentPage__return">
+            <p className= 'commentPage__return-text'> 
+                <Link to ="/search">Return Page </Link>
+            </p>
+        </div>
+        <div className= 'facts__info'>
+        <div className ='facts__text facts__list'>
+                <p className="facts__name">{name} </p>
+                <img className="food__photo" src={image} />
+            </div>
+            <div className ='facts__fat facts__list'>
+                <p className = "facts__text">Saturated Fat</p>
+                <p className="facts__fat-fact">{saturated_fat} </p>
+            </div>
 
-         <div className = 'food__fat'>
-             <p className>Saturated Fat</p>
-             <p className="food__fat-fact">{saturated_fat} </p>
-         </div>
-
-         <div className="food__cholesterol">
-             <p className>Cholesterol</p>
-             <p className="food__cholesterol-detail">{cholesterol}</p>
-         </div>
-         <div className="food__sodium">
-             <p className>Sodium</p>
-             <p className="food__sodium-detail">{sodium}</p>
-         </div>
-         <div className="total_carbohydrates">
-             <p className>Total Carbohydrates</p>
-             <p className="food__total_carbohydrates-fact">{total_carbohydrates}</p>
-         </div>
-         <div className="total_vitamin-a">
-             <p className>Vitamin A</p>
-             <p className="food__total_carbohydrates-fact">{vitamin_a}</p>
-         </div>
-         <div className="total_calcium">
-             <p className>Calcium</p>
-             <p className="food__total_carbohydrates-fact">{calcium}</p>
+            <div className="facts__cholesterol facts__list">
+                <p className = "facts__text">Cholesterol</p>
+                <p className="facts__cholesterol-detail">{cholesterol}</p>
+            </div>
+            <div className="facts__sodium facts__list">
+                <p className = "facts__text">Sodium</p>
+                <p className="facts__sodium-detail">{sodium}</p>
+            </div>
+            <div className="facts__potassium facts__list">
+                <p className = "facts__text">Potassium</p>
+                <p className="facts__potassium-detail">{potassium}</p>
+            </div>
+            <div className="total_carbohydrates facts__list">
+                <p className = "facts__text">Total Carbohydrates</p>
+                <p className="food__total_carbohydrates-fact">{total_carbohydrates}</p>
+            </div>
+            <div className="total_fiber facts__list">
+                <p className = "facts__text">Dietary Fiber</p>
+                <p className="food__total_carbohydrates-fact">{dietary_fiber}</p>
+            </div> 
+            <div className="total_sugar facts__list">
+                <p className = "facts__text">Sugar</p>
+                <p className="food__total_carbohydrates-fact">{sugar}</p>
+            </div>
          </div>
 
 

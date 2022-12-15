@@ -1,7 +1,10 @@
 const express = require("express");
-const mysql = require ("mysql")
+const mysql = require ("mysql");
+const cors = require ("cors");
 
 const app = express();
+// middleware
+app.use (cors());
 const PORT = 8420;
 
 //going over every model that we have created
@@ -17,6 +20,16 @@ app.use(express.json())
 
 const postRouter = require ('./routes/Posts');
 app.use ('/posts', postRouter)
+
+const commentsRouter = require ('./routes/Comments');
+app.use ('/comments', commentsRouter)
+
+const nutritionRouter = require('./routes/Nutrition')
+app.use('/nutrition', nutritionRouter)
+
+const userRouter = require('./routes/Users')
+app.use('/offical', userRouter)
+// offical == auth
 
 db.sequelize.sync().then(() =>{ 
     entryPoint();

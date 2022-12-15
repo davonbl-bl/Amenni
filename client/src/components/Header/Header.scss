@@ -1,0 +1,60 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+ 
+
+.header{
+    &__pages{
+
+        font-family: 'Apercu Mono';
+        @include tablet{
+            display:flex; 
+            justify-content: space-between;
+            padding-left: 25px;
+            padding-right: 25px; 
+        }
+    }
+
+    &__pages-left, &__pages-right{
+        @include tablet{
+            display:flex;
+            justify-content: space-between;
+            // width: 20%;
+            width:22%;
+        }
+    }
+
+    &__details--pages{
+            text-decoration: none;
+    }
+
+    &__link{
+            text-decoration: none;
+    }
+
+    &__details--left{
+        @include tablet{
+        width: 45%;
+        margin-left: 8px;
+        text-align: left;
+        }
+    }
+
+    &__details--center{
+        font-size: 37px;
+        font-weight: 600;
+        color: #b94429;
+        font-style: italic;
+        margin-top: 0;
+    }
+
+    &__pages{
+        text-align: left;
+    }
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    // color: #18120e; 
+}

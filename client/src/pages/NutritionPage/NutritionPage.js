@@ -41,7 +41,7 @@ function NutritionPage() {
 
     return (
         <div classNme='food__items'>
-            {name}
+            {/* {name} */}
             {/* <p>{food_name}</p> */}
 
             {
@@ -53,6 +53,8 @@ function NutritionPage() {
                             {/* <Link to={`/${ele.name}`}><Link/> */}
                                 <NutritionFacts
                                     key={index}
+                                    name = {ele.food_name}
+                                    image={ele.photo.thumb}
                                     saturated_fat={ele.nf_saturated_fat}
                                     cholesterol={ele.nf_cholesterol}
                                     sodium={ele.nf_sodium}

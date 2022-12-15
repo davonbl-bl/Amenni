@@ -1,3 +1,76 @@
-.food__container {
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
 
+
+.info{
+
+    padding-top: 16px;
+
+    &__text{
+        font-family: 'Apercu Mono';
+    }
+
+    &__body{
+        @include tablet{
+            display: flex;
+            align-items: baseline;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    &__stock-photo{    
+
+        width: 85%;
+        /* padding-left: 77px; */
+        border-radius: 11px;
+        //add a styling effect
+        
+    }
+
+    &__title{
+
+        font-size:44px;
+        font-family: 'Apercu Mono';
+        font-weight:500;
+        margin-bottom: 0; 
+        
+    }
+
+    &__body-left{
+
+        @include tablet {
+        align-self: center;
+        width: 310px;
+        }
+    }
+
+    &__body-right{
+        @include tablet{
+        width: 87%;
+        }
+    }
+
+    &__text{
+        font-size: 20px;
+        @include tablet{
+        width: 50%;
+        text-align: center;
+        margin: auto;
+        padding-top: 20px;
+        font-size: 20px;
+        }
+    }
+
+    &__quote{
+        font-style: italic;
+        font-family: 'Apercu Mono';
+    }
+
+    &__pages{
+        text-align: left;
+    }
+
+    
 }

@@ -1,0 +1,58 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.sign-up{
+    font-family: 'Apercu Mono';
+    border:2px solid black; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 36%;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    margin-top: 100px;
+
+    &__title{
+        margin-top: 16px;
+        margin-bottom: 16px; 
+    }
+
+    &__form{
+        display:flex;
+        flex-direction: column;
+        width: 57%;
+    }
+
+    &__form__btn{
+        width:100%; 
+    }
+
+    &__top, &__bottom{
+        display:flex;
+        flex-direction: column;
+    }
+
+    &__field{
+        padding: 0.5rem 1rem;
+        border: solid #BDC5D5 0.1rem;
+        border-radius: 1.25rem;
+        text-align: left;
+    }
+
+    &__label{
+        text-align:left;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    &__btn{
+        padding: 0.5rem 1rem;
+        border-radius: 1.25rem;
+        border: solid #BDC5D5 0.1rem;
+        margin-top: 16px;
+        margin-bottom: 16px; 
+    }
+
+}
