@@ -4,6 +4,8 @@
 Tech used: JavaScript, SASS, HTML, MySQL, NodeJS, Express, Axios, sequelize, formik, and yup.
 
 1. From the DataBase/Back-end
+
+From the terminal: 
   a. cd server
   b. npm i
   c. npx nodemon index
