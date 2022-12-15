@@ -16,14 +16,14 @@
 
     &__title{
         text-align:left;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: .625rem;
+        padding-bottom: .625rem;
     }
 
     &__postText{
         text-align: left;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: .625rem;
+        padding-bottom: .625rem;
     }
 
     &__username{
@@ -37,7 +37,7 @@
         width: 50%;
         margin: auto;
         text-align: left;
-        margin-top: 16px;
+        margin-top: 1rem;
         background-color: white;
     }
 
@@ -49,7 +49,7 @@
     }
 
     &__comment-text{
-        padding:55px 1rem;  
+        padding:3.4375rem 1rem;  
     }
 
     &__comment-section{
@@ -58,8 +58,8 @@
         flex-direction: column;
         width: 53%;
         margin: auto;
-        padding-top: 35px;
-        padding-bottom: 20px;
+        padding-top: 2.1875rem;
+        padding-bottom: 1.25rem;
     
     }
 

@@ -41,16 +41,11 @@ function NutritionPage() {
 
     return (
         <div classNme='food__items'>
-            {/* {name} */}
-            {/* <p>{food_name}</p> */}
 
             {
                 nutrients.map((ele, index) => {
                     return (
-                    //    <NutritionFacts/>
                         <div>
-
-                            {/* <Link to={`/${ele.name}`}><Link/> */}
                                 <NutritionFacts
                                     key={index}
                                     name = {ele.food_name}
@@ -65,9 +60,7 @@ function NutritionPage() {
                                     protein = {ele.nf_protein}
                                     vitamin_a = {ele.full_nutrients[30].attr_id}
                                     calcium = {ele.nf_calcium_mg}
-                                />
-                            
-                            
+                                />  
                             
                         </div>
                         

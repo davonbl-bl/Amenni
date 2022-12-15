@@ -12,11 +12,11 @@
     width: 36%;
     margin: 0 auto;
     border-radius: 0.5rem;
-    margin-top: 100px;
+    margin-top: 6.25rem;
 
     &__title{
-        margin-top: 16px;
-        margin-bottom: 16px; 
+        margin-top: 1rem;
+        margin-bottom: 1rem; 
     }
 
     &__form{
@@ -43,16 +43,16 @@
 
     &__label{
         text-align:left;
-        padding-bottom: 10px;
-        padding-top: 10px;
+        padding-bottom: .625rem;
+        padding-top: .625rem;
     }
 
     &__btn{
         padding: 0.5rem 1rem;
         border-radius: 1.25rem;
         border: solid #BDC5D5 0.1rem;
-        margin-top: 16px;
-        margin-bottom: 16px; 
+        margin-top: 1rem;
+        margin-bottom: 1rem; 
     }
 
 }

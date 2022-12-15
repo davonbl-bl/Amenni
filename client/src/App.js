@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import SearchPage from './pages/SearchPage/SearchPage';
 import NutritionFacts from './components/NutritionFacts/NutritionFacts';
 import NutritionPage from './pages/NutritionPage/NutritionPage';
-import RegisterForm from './components/RegisterForm/RegisterForm';
 import Comments from './components/Comments/Comments';
 import CreateComment from './pages/CreateComment/CreateComment';
 import CommentPost from './pages/CommentPost/CommentPost';

@@ -19,12 +19,8 @@
         margin-right: auto; 
 
         @include tablet{
-            margin-top: 55px;
+            margin-top: 3.4375rem;
         } 
-    }
-
-    &__list{
-        // width: 25%; 
     }
 
     .food__items #text{
@@ -33,7 +29,7 @@
 
     &__text{
         font-weight:bold; 
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 
     &__photo{

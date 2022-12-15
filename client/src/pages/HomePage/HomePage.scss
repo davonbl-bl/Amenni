@@ -15,8 +15,8 @@
         @include tablet{
             display: flex;
             align-items: baseline;
-            padding-left: 20px;
-            padding-right: 20px;
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
         }
     }
 
@@ -24,14 +24,14 @@
 
         width: 85%;
         /* padding-left: 77px; */
-        border-radius: 11px;
+        border-radius: .6875rem;
         //add a styling effect
         
     }
 
     &__title{
 
-        font-size:44px;
+        font-size:2.75rem;
         font-family: 'Apercu Mono';
         font-weight:500;
         margin-bottom: 0; 
@@ -42,7 +42,7 @@
 
         @include tablet {
         align-self: center;
-        width: 310px;
+        width: 19.375rem;
         }
     }
 
@@ -53,13 +53,13 @@
     }
 
     &__text{
-        font-size: 20px;
+        font-size: 1.25rem;
         @include tablet{
         width: 50%;
         text-align: center;
         margin: auto;
-        padding-top: 20px;
-        font-size: 20px;
+        padding-top: 1.25rem;
+        font-size: 1.25rem;
         }
     }
 

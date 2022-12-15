@@ -6,8 +6,8 @@
 .createComment{
 
     font-family: "Apercu Mono";
-    padding-left:20px;
-    padding-right:20px; 
+    padding-left:1.25rem;
+    padding-right:1.25rem; 
 
     @include tablet{
         // display:flex;
@@ -44,7 +44,7 @@
         padding: 0.5rem 1rem;
         border: solid #BDC5D5 0.1rem;
         border-radius: 1.25rem;
-        margin-top: 16px;
+        margin-top: 1rem;
     }
 
     /*      
