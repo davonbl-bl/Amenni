@@ -1,7 +1,7 @@
 # capstone-project
 
 
-Tech used: JavaScript, SASS, HTML, MySQL, NodeJS, Express, Axios, sequelize, formik, and yup.
+Tech used: JavaScript, SASS, HTML, MySQL, NodeJS, Express, Axios, Nutritionix (API), sequelize, formik, and yup.
 
 1. From the DataBase/Back-end
 
