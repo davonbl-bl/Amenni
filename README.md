@@ -1,4 +1,4 @@
-# capstone-project
+# Amenni
 
 
 Tech used: JavaScript, SASS, HTML, MySQL, NodeJS, Express, Axios, Nutritionix (API), sequelize, formik, and yup.
