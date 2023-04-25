@@ -1,14 +1,14 @@
-import {useState, useContext} from 'react'; 
+import { AuthContext } from '../AuthContext/AuthContext';
+import {useState, useContext} from 'react';
 import axios from 'axios';
 import './Login.scss';
-import { Link, useNavigate} from 'react-router-dom';
-import {AuthContext} from '../AuthContext/AuthContext'; 
+import { Link, useNavigate, redirect} from 'react-router-dom';
 
 
 function Login () {
-    const [username, setUsername] = useState ("")
-    const [password, setPassword] = useState("")
-    const {setOfficalState} = useContext(AuthContext)
+    const [username, setUsername] = useState ("");
+    const [password, setPassword] = useState("");
+    const {setOfficalState} = useContext(AuthContext);
 
     let navigate = useNavigate();
 
@@ -24,8 +24,9 @@ function Login () {
             if(res.data.error){ 
                 console.log(res.data.error)
             } else{
-            localStorage.setItem("accessToken", res.data)
-            setOfficalState(true)
+            localStorage.setItem("accessToken", res.data.token)
+            setOfficalState({username: res.data.username, id: res.data.id, status: true})
+            console.log(setOfficalState(true))
             navigate("/createcomment");
             // return redirect ("/createcomment")
 

@@ -2,10 +2,15 @@ import './Register.scss';
 import {Formik, Form, Field, ErrorMessage } from "formik"; 
 import * as Yup from 'yup'; 
 import axios from "axios";
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom';
+import {AuthContext} from '../AuthContext/AuthContext'; 
+import {useState, useContext} from 'react'; 
 
 
 function Register () {
+
+    const {setOfficalState} = useContext(AuthContext);
+    let navigate = useNavigate();
 
     const initialValues = {
         username: "",
@@ -19,8 +24,18 @@ function Register () {
 
     const onSubmit = (obj) => {
 
-        axios.post("http://localhost:8420/offical", obj).then (() => {
-            console.log(obj)
+        axios.post("http://localhost:8420/offical", obj).then ((res) => {
+            console.log(res)
+            if(res.data.error){ 
+                console.log(res.data.error)
+            } else{
+            localStorage.setItem("accessToken", res.data)
+            setOfficalState(true)
+            navigate("/createcomment");
+            // return redirect ("/createcomment")
+
+            }
+
         }).catch((error) => {
             console.log(error);
         })

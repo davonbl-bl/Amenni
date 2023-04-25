@@ -4,7 +4,7 @@ import axios from 'axios';
 import {useParams} from 'react';
 
 
-function NutritionFacts({name, image, saturated_fat, cholesterol,sodium, potassium, total_carbohydrates,
+function NutritionFacts({name, image, calories, saturated_fat, cholesterol,sodium, potassium, total_carbohydrates,
     dietary_fiber, sugar, protein }) {
 
         // const zero = $0; 
@@ -23,33 +23,37 @@ function NutritionFacts({name, image, saturated_fat, cholesterol,sodium, potassi
                 <img className="food__photo" src={image} />
             </div>
             <div className ='facts__fat facts__list'>
-                <p className = "facts__text">Saturated Fat</p>
-                <p className="facts__fat-fact">{saturated_fat} </p>
+                <p className = "facts__text">Calories</p>
+                <p className="facts__fat-fact">{calories}</p>
             </div>
 
+            <div className ='facts__fat facts__list'>
+                <p className = "facts__text">Saturated Fat</p>
+                <p className="facts__fat-fact">{saturated_fat}g</p>
+            </div>
             <div className="facts__cholesterol facts__list">
                 <p className = "facts__text">Cholesterol</p>
-                <p className="facts__cholesterol-detail">{cholesterol}</p>
+                <p className="facts__cholesterol-detail">{cholesterol}mg</p>
             </div>
             <div className="facts__sodium facts__list">
                 <p className = "facts__text">Sodium</p>
-                <p className="facts__sodium-detail">{sodium}</p>
+                <p className="facts__sodium-detail">{sodium}mg</p>
             </div>
             <div className="facts__potassium facts__list">
                 <p className = "facts__text">Potassium</p>
-                <p className="facts__potassium-detail">{potassium}</p>
+                <p className="facts__potassium-detail">{potassium}mg</p>
             </div>
             <div className="total_carbohydrates facts__list">
                 <p className = "facts__text">Total Carbohydrates</p>
-                <p className="food__total_carbohydrates-fact">{total_carbohydrates}</p>
+                <p className="food__total_carbohydrates-fact">{total_carbohydrates}g</p>
             </div>
             <div className="total_fiber facts__list">
                 <p className = "facts__text">Dietary Fiber</p>
-                <p className="food__total_carbohydrates-fact">{dietary_fiber}</p>
+                <p className="food__total_carbohydrates-fact">{dietary_fiber}g</p>
             </div> 
             <div className="total_sugar facts__list">
                 <p className = "facts__text">Sugar</p>
-                <p className="food__total_carbohydrates-fact">{sugar}</p>
+                <p className="food__total_carbohydrates-fact">{sugar}g</p>
             </div>
          </div>
 
