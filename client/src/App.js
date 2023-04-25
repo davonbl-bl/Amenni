@@ -11,11 +11,21 @@ import Register from './pages/Register/Register';
 import Login from './pages/Login/Login';
 import Header from './components/Header/Header';
 import HomePage from './pages/HomePage/HomePage';
+import Footer from './components/Footer/Footer';
 import { AuthContext } from '../src/pages/AuthContext/AuthContext';
-import { useState } from 'react';
+import { useState , useEffect } from 'react';
 
 function App() {
-  const [officalState, setOfficalState] = useState(false)
+  const [officalState, setOfficalState] = useState(false); 
+
+  // useEffect( () => {
+  //   if(localStorage.getItem){
+  //     setOfficalState(true); 
+  //   }
+  // }, )
+
+  
+  console.log(officalState); 
 
 
   return (
@@ -69,6 +79,7 @@ function App() {
               )
             }
           </Routes>
+          {/* <Footer/> */}
         </BrowserRouter>
       </AuthContext.Provider>
     </div>

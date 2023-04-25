@@ -5,6 +5,7 @@ import {Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from 'yup'; 
 import {useNavigate} from "react-router-dom";
 import {useState, useEffect} from 'react';
+import writingThoughts from '../../Assets/images/writing-thoughts.jpg'
 
 
 function CreateComment() {
@@ -45,7 +46,7 @@ function CreateComment() {
     const validationSchema = Yup.object().shape( {
         title: Yup.string().required(),
         postText: Yup.string().required(),
-        // username: Yup.string().min(3).max(15).required()
+        username: Yup.string().min(3).max(15).required()
     })
 
     return (
@@ -54,6 +55,8 @@ function CreateComment() {
                     <h1 className='createComment__text'>
                         Journal 
                     </h1>
+                    <img className= 'createComment__photo' src={writingThoughts} />
+                    
                 </div>
                 <Formik
                 initialValues ={initialValues} 
@@ -68,7 +71,7 @@ function CreateComment() {
                                 className="createComment__top-post"
                                 name="title"
                                 placeholder="(Ex. Title...)"
-                                autocomplete = "off"
+                                autoComplete = "off"
                             />
                         </div>
 
@@ -80,7 +83,7 @@ function CreateComment() {
                                 className="createComment__middle-post"
                                 name="postText"
                                 placeholder="(Ex. Comment...)"
-                                autocomplete = "off"
+                                autoComplete = "off"
                             />
                         </div>
                         <div className="createComment__bottom">
@@ -90,7 +93,7 @@ function CreateComment() {
                                 className="createComment__bottom-post"
                                 name="username"
                                 placeholder="(Ex. Jason...)"
-                                autocomplete = "off"
+                                autoComplete = "off"
                             />
                         </div>
                         {/* type="submit" */}

@@ -17,7 +17,7 @@ function NutritionPage() {
 
     const nuritionValue = () => {
 
-        const params = { query: name }
+        const params = { query: `${name} vitamin a vitamin c vitamin a` }
 
 
         axios.post(postEndPoint, params,
@@ -30,6 +30,9 @@ function NutritionPage() {
             .then((res) => {
                 console.log(res.data)
                 setNutrients(res.data.foods)
+
+                console.log(res.data.foods[0])
+
             }).catch((error) => {
                 console.log(error)
             })
@@ -40,6 +43,7 @@ function NutritionPage() {
     },[name])
 
     return (
+        // fix this issue later on 
         <div classNme='food__items'>
 
             {
@@ -50,6 +54,7 @@ function NutritionPage() {
                                     key={index}
                                     name = {ele.food_name}
                                     image={ele.photo.thumb}
+                                    calories = {ele.nf_calories}
                                     saturated_fat={ele.nf_saturated_fat}
                                     cholesterol={ele.nf_cholesterol}
                                     sodium={ele.nf_sodium}

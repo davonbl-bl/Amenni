@@ -15,6 +15,8 @@ router.post("/", async (req, res) => {
             username: username,
             password: hash
         })
+
+        
     })
     res.json("passed!")
 })
@@ -42,14 +44,15 @@ router.post('/login', async (req, res) => {
                     username: user.username, id: user.id},
                     "criticalString")
                 // res.json("login sucessful!")
-                res.json(getToken)
+                // res.json(getToken)
+                res.json({ token: getToken, username: username, id: user.id})
             }
         })
     }
 })
 
 router.get ('/auth', confirmToken, (req, res) => {
-    res.json(req.user)
+    res.json(req.user);
 })
 
 

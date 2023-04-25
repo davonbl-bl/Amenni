@@ -3,6 +3,7 @@ import './SearchPage.scss';
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import FoodDetails from '../../components/FoodDetails/FoodDetails';
+import FoodImg from '../../Assets/images/flat-healthy-food-icons.jpg'
 import Comments from '../../components/Comments/Comments';
 
 
@@ -73,6 +74,7 @@ function SearchPage() {
             
             <form className="food__form" onSubmit={searchFoodItems}>
                 <h1 className="food__title">Search</h1>
+                <img className="food__photo" src={FoodImg} />
                 <input className="food__input" id="search" type="text" placeholder="Search Food Database" />
                 <button className="food__btn" type="submit">Search</button>
             </form>

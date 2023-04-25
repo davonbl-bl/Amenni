@@ -6,6 +6,7 @@
 .info{
 
     padding-top: 16px;
+    font-family: 'Apercu Mono';
 
     &__text{
         font-family: 'Apercu Mono';
@@ -26,6 +27,11 @@
         /* padding-left: 77px; */
         border-radius: .6875rem;
         //add a styling effect
+
+        @include tablet{
+            padding-left: 3.125rem;
+            max-width:31.25rem; 
+        }
         
     }
 
@@ -35,6 +41,7 @@
         font-family: 'Apercu Mono';
         font-weight:500;
         margin-bottom: 0; 
+        display: none;
         
     }
 
@@ -42,7 +49,7 @@
 
         @include tablet {
         align-self: center;
-        width: 19.375rem;
+        // width: 19.375rem;
         }
     }
 
@@ -61,6 +68,12 @@
         padding-top: 1.25rem;
         font-size: 1.25rem;
         }
+    }
+
+    &__brief-text{
+        margin:auto;
+        text-align: center;
+        font-size:1.125rem; 
     }
 
     &__quote{

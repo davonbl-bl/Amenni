@@ -2,6 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import {useParams, Link} from "react-router-dom"; 
 import axios from "axios";
 import "./CommentPost.scss";
+import { AuthContext } from '../AuthContext/AuthContext';
 
 
 
@@ -10,6 +11,7 @@ function CommentPost () {
     const [commentPost, setCommentPost] = useState([])
     const [listOfComments, setListOfComments] = useState([])
     const [newComment, setNewComment] = useState("")
+    const {officalState} = useContext(AuthContext);
 
 
 
@@ -27,7 +29,10 @@ function CommentPost () {
         }).catch((error) => {
             console.log(error);
         })
-    },[])
+    // when adding and referencing 'officalState' from line 14, it would cause the user name
+    //to dissapar when logging out. However, you still have to refresh the page for some reason.
+    // The reason I believe is that there is a conflict between the web API and the authentation process
+    },[{officalState}])
     // with the array it runs once, instead of running unlimitedly 
 
     const postComment = () => {
@@ -52,6 +57,19 @@ function CommentPost () {
         }).catch((error) => {
             console.log(error);
         })
+    }
+
+    const deleteComment = (id) => {
+
+        axios.delete(`http://localhost:8420/comments/${id}`, {
+            headers: { accessToken: localStorage.getItem("accessToken")},
+        }). then(() => {
+            setListOfComments(listOfComments.filter((post) => {
+                return post.id != id; 
+            }))
+            console.log('token deleted'); 
+        })
+
     }
     
 
@@ -97,13 +115,21 @@ function CommentPost () {
                                     <div className ="commentPage__username">
                                         <label className="commentPage__username-tag"> 
                                             - {comment.username}
+                                            
                                         </label>
                                     </div>
+                                    {/* the name is mispelled */}
+                                    {/* {officalState.username === comment.usename && 
+                                       ( <button 
+                                            onClick= {() => {
+                                                deleteComment(comment.id);
+                                            }}
+                                            >X
+                                        </button>)} */}
 
-                                    
                                 </div>
                             )
-
+                            
                         })}
                     </div>
                     

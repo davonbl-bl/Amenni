@@ -23,19 +23,20 @@
     }
 
     &__container{
-        // display: flex;
-        // flex-direction: row;
-        // flex-wrap: wrap;
-        // width: 53%;
-        // margin:auto; 
-
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 55%;
+        flex-direction: column;
+        width: 35%;
         margin: auto;
 
         @include tablet{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 55%;
+            margin: auto;
+        }
+
+        @include desktop{
             // align-items: center;
             // text-align: center;
             padding-top: 1.25rem;
@@ -44,6 +45,13 @@
             margin-top: .3125rem;
             margin-bottom: .3125rem; 
         }
+    }
+
+    &__photo{
+        width: 60%;
+        margin: auto;
+        border-radius: 0.625rem;
+        padding-bottom: 1rem;
     }
 
 }

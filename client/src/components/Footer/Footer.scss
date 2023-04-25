@@ -1,0 +1,19 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+
+.footer{
+    font-family: 'Apercu Mono';
+    background-color: rgba(255, 255, 255, 0.768627451);
+    height: 4rem;
+
+    &__name{
+        margin-bottom: 0;
+        font-weight: 600;
+        color: rgb(143, 135, 195);
+        padding-top: 1.25rem; 
+        font-size: 1.5rem; 
+    
+    }
+}
